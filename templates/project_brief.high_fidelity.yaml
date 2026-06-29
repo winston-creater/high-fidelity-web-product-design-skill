@@ -1,0 +1,40 @@
+project:
+  name: ""
+  type: ""
+  target_users: []
+  primary_conversion: ""
+  secondary_conversions: []
+  brand_tone: []
+  pages:
+    - "Home"
+  tech_stack: "Next.js + Tailwind CSS"
+  constraints: []
+
+own_ideas:
+  - ""
+
+references:
+  - url: ""
+    reason: ""
+    borrow_scope: "structure only | UI pattern only | interaction only | conversion path only"
+    must_not_copy:
+      - "logo"
+      - "brand assets"
+      - "copy"
+
+fidelity_targets:
+  desktop_visual_fidelity: 94
+  mobile_visual_fidelity: 92
+  structure_fidelity: 95
+  design_token_fidelity: 95
+  component_contract_fidelity: 95
+  interaction_fidelity: 88
+  responsive_fidelity: 90
+  code_maintainability: 90
+  originality: 95
+
+tool_preferences:
+  allow_browser_capture: true
+  allow_image_generation: true
+  allow_figma_generation: true
+  allow_frontend_code_generation: true

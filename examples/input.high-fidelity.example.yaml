@@ -1,0 +1,54 @@
+project:
+  name: "AI CRM Landing Page"
+  type: "B2B SaaS 官网首页"
+  target_users:
+    - "销售团队负责人"
+    - "创业公司 founder"
+    - "增长负责人"
+  primary_conversion: "预约 demo"
+  secondary_conversions:
+    - "查看产品演示"
+    - "订阅产品更新"
+  brand_tone:
+    - "可信"
+    - "现代"
+    - "高效"
+  pages:
+    - "Home"
+  tech_stack: "Next.js + TypeScript + Tailwind CSS"
+  constraints:
+    - "首屏必须 5 秒内讲清价值"
+    - "移动端必须优先"
+    - "不要重动效"
+
+own_ideas:
+  - "首页首屏放一句强价值主张、产品截图和预约 demo CTA。"
+  - "中部用 3 个场景解释产品如何提升销售跟进效率。"
+  - "增加客户 logo 或可信数据来增强信任。"
+  - "底部放 FAQ 和二次 CTA。"
+
+references:
+  - url: "https://example.com"
+    reason: "喜欢它的首屏结构和 CTA 层级"
+    borrow_scope: "structure only"
+    must_not_copy:
+      - "logo"
+      - "brand colors"
+      - "copy"
+  - url: "https://example.org/pricing"
+    reason: "喜欢它的价格卡布局和 FAQ 组织方式"
+    borrow_scope: "interaction pattern only"
+    must_not_copy:
+      - "pricing text"
+      - "brand assets"
+
+fidelity_targets:
+  desktop_visual_fidelity: 94
+  mobile_visual_fidelity: 92
+  structure_fidelity: 95
+  design_token_fidelity: 95
+  component_contract_fidelity: 95
+  interaction_fidelity: 88
+  responsive_fidelity: 90
+  code_maintainability: 90
+  originality: 95

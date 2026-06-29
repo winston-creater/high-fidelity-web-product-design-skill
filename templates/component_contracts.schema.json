@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Component Contracts",
+  "type": "object",
+  "required": [
+    "components"
+  ],
+  "properties": {
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "props",
+          "variants",
+          "states"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "props": {
+            "type": "object"
+          },
+          "variants": {
+            "type": "array"
+          },
+          "states": {
+            "type": "array"
+          },
+          "a11y": {
+            "type": "array"
+          },
+          "tokens": {
+            "type": "object"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

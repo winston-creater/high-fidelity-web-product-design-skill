@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Figma Generation Contract",
+  "type": "object",
+  "required": [
+    "figma_file",
+    "pages",
+    "variables",
+    "components"
+  ],
+  "properties": {
+    "figma_file": {
+      "type": "object"
+    },
+    "pages": {
+      "type": "array"
+    },
+    "variables": {
+      "type": "object"
+    },
+    "components": {
+      "type": "array"
+    },
+    "prototype_links": {
+      "type": "array"
+    },
+    "notes": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": true
+}

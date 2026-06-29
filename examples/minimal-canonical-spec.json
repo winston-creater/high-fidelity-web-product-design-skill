@@ -1,0 +1,129 @@
+{
+  "project": {
+    "name": "AI CRM Landing Page",
+    "type": "B2B SaaS 官网首页",
+    "target_users": [
+      "销售团队负责人",
+      "创业公司 founder"
+    ],
+    "primary_conversion": "预约 demo",
+    "brand_tone": [
+      "可信",
+      "现代",
+      "高效"
+    ]
+  },
+  "pages": [
+    {
+      "id": "page.home",
+      "name": "Home",
+      "goal": "让目标用户理解产品如何提升销售跟进效率，并预约 demo。",
+      "sections": [
+        {
+          "id": "section.home.header",
+          "name": "Header",
+          "purpose": "提供清晰导航和主行动入口。",
+          "components": [
+            "component.logo",
+            "component.nav",
+            "component.button.primary"
+          ],
+          "content": {
+            "nav_items": [
+              "产品",
+              "场景",
+              "案例",
+              "FAQ"
+            ]
+          },
+          "interactions": [
+            "interaction.mobileMenu.toggle"
+          ],
+          "responsive_behavior": {
+            "mobile": "collapse nav into drawer"
+          },
+          "a11y_requirements": [
+            "nav landmark",
+            "keyboard reachable"
+          ]
+        },
+        {
+          "id": "section.home.hero",
+          "name": "Hero",
+          "purpose": "5 秒内讲清产品价值并引导预约 demo。",
+          "components": [
+            "component.hero.copy",
+            "component.button.primary",
+            "component.button.secondary",
+            "component.productMockup"
+          ],
+          "content": {
+            "headline": "让销售跟进自动变得清晰、及时、可追踪",
+            "subheadline": "AI 帮助团队整理线索、提醒跟进、总结客户状态。"
+          },
+          "interactions": [
+            "interaction.cta.primary"
+          ],
+          "responsive_behavior": {
+            "mobile": "stack copy above product mockup"
+          },
+          "a11y_requirements": [
+            "single h1",
+            "cta has accessible name"
+          ]
+        },
+        {
+          "id": "section.home.usecases",
+          "name": "Use Cases",
+          "purpose": "用场景解释产品能力。",
+          "components": [
+            "component.card.usecase"
+          ],
+          "content": {
+            "cards": [
+              "自动整理线索",
+              "跟进提醒",
+              "客户状态总结"
+            ]
+          },
+          "interactions": [
+            "interaction.card.hover"
+          ],
+          "responsive_behavior": {
+            "mobile": "single column cards"
+          },
+          "a11y_requirements": [
+            "cards are readable without hover"
+          ]
+        },
+        {
+          "id": "section.home.faq",
+          "name": "FAQ",
+          "purpose": "消除预约前的疑虑。",
+          "components": [
+            "component.faq.accordion"
+          ],
+          "content": {
+            "questions": [
+              "需要替换现有 CRM 吗？",
+              "多久能上线？"
+            ]
+          },
+          "interactions": [
+            "interaction.faq.toggle"
+          ],
+          "responsive_behavior": {
+            "mobile": "full width accordion"
+          },
+          "a11y_requirements": [
+            "aria-expanded",
+            "keyboard toggle"
+          ]
+        }
+      ]
+    }
+  ],
+  "tokens_ref": "design-tokens.json",
+  "components_ref": "component-contracts.json",
+  "interactions_ref": "interaction-models.json"
+}

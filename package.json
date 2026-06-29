@@ -1,0 +1,52 @@
+{
+  "name": "high-fidelity-web-product-design-skill",
+  "version": "1.0.0",
+  "description": "Codex/Agent skill for high-fidelity web product design from own ideas and reference websites.",
+  "type": "module",
+  "license": "MIT",
+  "private": false,
+  "bin": {
+    "hf-web-design-skill": "bin/hf-web-design-skill.mjs"
+  },
+  "scripts": {
+    "init": "node scripts/init-workspace.mjs",
+    "route": "node scripts/route-tools.mjs",
+    "collect": "node scripts/collect-page-signals.mjs",
+    "render-prompt": "node scripts/build-render-prompt.mjs",
+    "figma-contract": "node scripts/generate-figma-contract.mjs",
+    "frontend-spec": "node scripts/generate-frontend-spec.mjs",
+    "qa": "node scripts/qa-checklist-generator.mjs",
+    "score": "node scripts/fidelity-score.mjs",
+    "validate": "node scripts/validate-spec.mjs",
+    "docs:check": "node scripts/check-doc-links.mjs",
+    "validate:examples": "node scripts/validate-spec.mjs examples/minimal-canonical-spec.json && node scripts/fidelity-score.mjs examples/fidelity-score.example.json --strict && node scripts/route-tools.mjs examples/tool-availability.example.yaml --phase all"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "codex-skill",
+    "web-design",
+    "figma",
+    "playwright",
+    "design-tokens",
+    "frontend-codegen",
+    "ux-analysis"
+  ],
+  "files": [
+    "SKILL.md",
+    "README.md",
+    "workflow.md",
+    "agents/",
+    "bin/",
+    "docs/",
+    "examples/",
+    "prompts/",
+    "scripts/",
+    "src/",
+    "templates/",
+    "QUICKSTART.md",
+    "PACKAGE_CONTENTS.md",
+    "tools/"
+  ]
+}

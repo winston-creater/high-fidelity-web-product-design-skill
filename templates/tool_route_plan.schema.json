@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Tool Route Plan",
+  "type": "object",
+  "required": [
+    "routes"
+  ],
+  "properties": {
+    "routes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "phase",
+          "selected_route",
+          "fallback"
+        ],
+        "properties": {
+          "phase": {
+            "type": "string"
+          },
+          "selected_route": {
+            "type": "string"
+          },
+          "tools_to_call": {
+            "type": "array"
+          },
+          "fallback": {
+            "type": "string"
+          },
+          "requires_auth": {
+            "type": "boolean"
+          },
+          "notes": {
+            "type": "array"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "scores": {
+    "desktop_visual_fidelity": 95,
+    "mobile_visual_fidelity": 93,
+    "structure_fidelity": 96,
+    "design_token_fidelity": 96,
+    "component_contract_fidelity": 95,
+    "interaction_fidelity": 90,
+    "responsive_fidelity": 92,
+    "code_maintainability": 91,
+    "originality": 97
+  }
+}

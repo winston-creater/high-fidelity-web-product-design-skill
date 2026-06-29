@@ -1,0 +1,12 @@
+phase: all
+tools:
+  playwright_mcp: false
+  chrome_devtools_mcp: false
+  playwright_local: true
+  image_generation: false
+  figma_mcp: false
+  figma_rest_api: false
+  code_connect: false
+  axe_core: false
+  lighthouse: false
+  visual_diff: false

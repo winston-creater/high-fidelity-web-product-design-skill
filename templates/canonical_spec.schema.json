@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Canonical Web Product Design Spec",
+  "type": "object",
+  "required": [
+    "project",
+    "pages",
+    "tokens_ref",
+    "components_ref",
+    "interactions_ref"
+  ],
+  "properties": {
+    "project": {
+      "type": "object",
+      "required": [
+        "name",
+        "type",
+        "primary_conversion"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "target_users": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "primary_conversion": {
+          "type": "string"
+        },
+        "brand_tone": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "pages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "goal",
+          "sections"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "goal": {
+            "type": "string"
+          },
+          "sections": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "name",
+                "purpose",
+                "components"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "purpose": {
+                  "type": "string"
+                },
+                "components": {
+                  "type": "array"
+                },
+                "content": {
+                  "type": "object"
+                },
+                "interactions": {
+                  "type": "array"
+                },
+                "responsive_behavior": {
+                  "type": "object"
+                },
+                "a11y_requirements": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "additionalProperties": true
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "tokens_ref": {
+      "type": "string"
+    },
+    "components_ref": {
+      "type": "string"
+    },
+    "interactions_ref": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}
