@@ -1,9 +1,19 @@
 ---
 name: ai-ui-design-pipeline
-description: Use this skill when building high-fidelity mobile-first UI with AI, mapping free component libraries, producing React/Tailwind prototypes, migrating them to WordPress/WooCommerce, and maintaining an AI-readable component registry.
+description: Use this skill when building high-fidelity mobile-first UI with AI, mapping free/open-source component libraries, producing React/Tailwind prototypes, migrating them to WordPress/WooCommerce, and maintaining an AI-readable component registry.
 ---
 
 # AI UI Design Pipeline Skill
+
+## Agent operating guide
+
+This skill is designed for AI agents. Before executing any UI, React, WordPress, QA, or component-registry task, the agent must read and follow:
+
+```text
+skills/ai-ui-design-pipeline/AGENT_GUIDE.md
+```
+
+`AGENT_GUIDE.md` is the operational manual. It contains the stage gates, exact file outputs, component-library rules, visual QA rules, WordPress migration rules, and registry maintenance rules.
 
 ## When to use this skill
 
@@ -61,6 +71,63 @@ daisyUI        → quick semantic utility components
 Meraki UI      → RTL / multilingual / Middle East references
 ```
 
+## Required agent workflow
+
+The agent must not jump directly into code. The required sequence is:
+
+```text
+1. Product Brief
+2. Page Map
+3. Benchmark Research
+4. Component Mapping
+5. Design Tokens
+6. React/Tailwind High-Fidelity Build
+7. Visual QA
+8. Component Registry Update
+9. WordPress/WooCommerce Migration
+10. WordPress Visual QA
+11. Registry + Documentation Update
+```
+
+The agent must not skip Benchmark Research, Component Mapping, Visual QA, Component Registry Update, or WordPress Visual QA.
+
+## Stage gates
+
+### Gate 1: Before React Build
+
+React/Tailwind implementation may start only when all are true:
+
+```text
+Product Brief exists.
+Benchmark Research exists.
+Component Map exists.
+Design Tokens exist.
+Every page module has a component source.
+```
+
+### Gate 2: Before WordPress Migration
+
+WordPress migration may start only when all are true:
+
+```text
+React high-fidelity page exists.
+React Visual QA score is 90 or above.
+Core reusable components have been added to component-registry.
+WordPress Migration Plan exists.
+```
+
+### Gate 3: Before completion
+
+A page is complete only when all are true:
+
+```text
+React QA score is 90 or above.
+WordPress QA score is 90 or above.
+Core shared components are reusable.
+No unapproved UI library was introduced.
+No one-off CSS remains for reusable modules.
+```
+
 ## Required stages
 
 ### Stage 1: Product Brief
@@ -71,7 +138,7 @@ Create or update:
 docs/00-product-brief.md
 ```
 
-Must include product type, target user, core pages, style keywords, forbidden styles, technical route, data sources, and acceptance criteria.
+Must include product type, target user, core pages, page priority, style keywords, forbidden styles, reference products, technical route, data sources, and acceptance criteria.
 
 Do not write UI code in this stage.
 
@@ -94,6 +161,8 @@ For every page, collect at least:
 1 component mapping suggestion
 ```
 
+Allowed reference sources include UI Design Daily, Pinterest, Screenlane free content, Chamjo free content, real app screenshots, and competitor mobile websites.
+
 Do not copy brand assets.
 
 ---
@@ -110,12 +179,14 @@ Every module must have:
 
 ```text
 component name
+component responsibility
 primary source
 backup source
 motion requirement
+design token dependencies
 WordPress migration difficulty
 reuse level
-design token dependencies
+registry decision
 ```
 
 No component source means no build.
@@ -133,13 +204,13 @@ docs/04-design-tokens.md
 
 Tokens must control layout, spacing, radius, typography, color, shadow, and motion.
 
-The agent must not randomly invent spacing, colors, font sizes, or shadows.
+The agent must not randomly invent spacing, colors, font sizes, or shadows. Any new visual value must be added to tokens first.
 
 ---
 
 ### Stage 5: React/Tailwind Build
 
-Build the page only after Stage 1-4 are approved.
+Build the page only after Stage 1-4 are complete.
 
 Rules:
 
@@ -151,6 +222,7 @@ compatible with 360px-430px
 mock data only
 no WordPress data yet
 no one-off CSS
+no unapproved UI library
 ```
 
 ---
@@ -215,11 +287,24 @@ escape all dynamic output
 one React component maps to one PHP template-part when possible
 ```
 
+Example:
+
+```text
+FeedProductCard.tsx → template-parts/cards/feed-product-card.php
+BottomNav.tsx       → template-parts/navigation/bottom-nav.php
+HomePage.tsx        → front-page.php
+```
+
 ---
 
 ### Stage 9: WordPress Visual QA
 
-Compare React high-fidelity screenshot and WordPress implementation screenshot.
+Compare:
+
+```text
+React high-fidelity screenshot
+WordPress implementation screenshot
+```
 
 Goal:
 
