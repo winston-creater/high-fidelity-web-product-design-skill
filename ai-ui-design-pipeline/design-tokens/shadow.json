@@ -1,0 +1,5 @@
+{
+  "shadow-card": "0 6px 20px rgba(0,0,0,0.06)",
+  "shadow-nav": "0 -4px 16px rgba(0,0,0,0.06)",
+  "shadow-floating": "0 10px 30px rgba(0,0,0,0.12)"
+}
