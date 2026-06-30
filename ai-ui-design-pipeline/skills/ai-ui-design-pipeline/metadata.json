@@ -1,0 +1,26 @@
+{
+  "name": "ai-ui-design-pipeline",
+  "version": "1.0.0",
+  "description": "AI-agent workflow for high-fidelity React/Tailwind UI, WordPress/WooCommerce migration, visual QA, and component registry maintenance.",
+  "language": "zh-CN",
+  "primary_outputs": [
+    "WORKFLOW.md",
+    "AGENTS.md",
+    "component-registry",
+    "prompts",
+    "design-tokens"
+  ],
+  "approved_react_libraries": [
+    "shadcn/ui",
+    "Origin UI",
+    "Magic UI"
+  ],
+  "approved_wordpress_helper_libraries": [
+    "HyperUI",
+    "Flowbite",
+    "Preline UI",
+    "daisyUI",
+    "Meraki UI"
+  ],
+  "minimum_visual_qa_score": 90
+}

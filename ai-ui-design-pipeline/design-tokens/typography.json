@@ -1,0 +1,12 @@
+{
+  "font-family": "-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif",
+  "text-xs": "11px",
+  "text-sm": "12px",
+  "text-base": "14px",
+  "text-md": "15px",
+  "text-lg": "17px",
+  "text-xl": "20px",
+  "line-tight": "1.2",
+  "line-normal": "1.4",
+  "line-relaxed": "1.55"
+}

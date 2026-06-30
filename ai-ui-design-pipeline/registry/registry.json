@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "ai-ui-design-pipeline-registry",
+  "items": [
+    {
+      "name": "mobile-product-card",
+      "type": "registry:block",
+      "title": "Mobile Product Card",
+      "description": "Mobile-first social commerce product card with React and WordPress implementations.",
+      "files": [
+        {
+          "path": "component-registry/mobile-product-card/component.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "component-registry/mobile-product-card/component.php",
+          "type": "registry:file"
+        },
+        {
+          "path": "component-registry/mobile-product-card/component.css",
+          "type": "registry:file"
+        }
+      ]
+    }
+  ]
+}
