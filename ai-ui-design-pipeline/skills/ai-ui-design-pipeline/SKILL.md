@@ -15,6 +15,41 @@ skills/ai-ui-design-pipeline/AGENT_GUIDE.md
 
 `AGENT_GUIDE.md` is the operational manual. It contains the stage gates, exact file outputs, component-library rules, visual QA rules, WordPress migration rules, and registry maintenance rules.
 
+## Required startup instruction
+
+When a user asks to use this skill, or when an agent decides this skill applies, the following instruction is mandatory and must be treated as part of the skill itself:
+
+```text
+请使用 ai-ui-design-pipeline skill。
+
+开始前必须读取：
+
+ai-ui-design-pipeline/skills/ai-ui-design-pipeline/SKILL.md
+ai-ui-design-pipeline/skills/ai-ui-design-pipeline/AGENT_GUIDE.md
+
+然后严格按照 AGENT_GUIDE.md 执行。
+
+不要直接写代码。
+先做 Research。
+再做 Component Mapping。
+再确认 Design Tokens。
+然后才允许进入 React/Tailwind Build。
+React QA ≥ 90 后，才允许迁移 WordPress。
+```
+
+Agent behavior required by this startup instruction:
+
+```text
+1. Read SKILL.md and AGENT_GUIDE.md first.
+2. Do not write implementation code immediately.
+3. Start with Research.
+4. Continue with Component Mapping.
+5. Confirm or create Design Tokens.
+6. Enter React/Tailwind Build only after the stage gates are satisfied.
+7. Run Visual QA after React Build.
+8. Enter WordPress migration only when React QA is 90 or above.
+```
+
 ## When to use this skill
 
 Use this skill when the user wants to:
