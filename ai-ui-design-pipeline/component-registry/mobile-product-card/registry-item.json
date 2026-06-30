@@ -1,0 +1,24 @@
+{
+  "name": "mobile-product-card",
+  "type": "registry:block",
+  "title": "Mobile Product Card",
+  "description": "A mobile-first social commerce product/content card with React and WordPress implementations.",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "component.tsx",
+      "type": "registry:component",
+      "target": "components/mobile-product-card.tsx"
+    },
+    {
+      "path": "component.php",
+      "type": "registry:file",
+      "target": "template-parts/cards/mobile-product-card.php"
+    },
+    {
+      "path": "component.css",
+      "type": "registry:file",
+      "target": "assets/css/components/mobile-product-card.css"
+    }
+  ]
+}
